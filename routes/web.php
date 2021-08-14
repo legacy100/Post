@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::resource('posts', PostController::class);
+
+// Route::resource('posts', PostController::class);
