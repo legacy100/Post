@@ -40,14 +40,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+        'title'=> 'required',
+        'description' =>'required',
         ]);
 
         Post::create($request->all());
 
-        return redirect()->route('posts.index')
-                        ->with('success','Post created successfully.');
+        return redirect()->route('posts.index')->with('success','Post created successfully');
     }
 
     /**
